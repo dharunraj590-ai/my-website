@@ -2,203 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ultimate Tech Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
 <style>
-  /* General Body & Background */
-  body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    overflow-x: hidden;
-  }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:#050814;
+  color:#fff;
+}
 
-  h1, h2, h3{
-    text-align:center;
-    color:#00f7ff;
-    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
-  }
+/* HEADER WITH MACBOOK BACKGROUND */
+.header{
+  background:
+    linear-gradient(rgba(5,8,20,.85),rgba(5,8,20,.85)),
+    url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+  background-size:cover;
+  background-position:center;
+  padding:60px 20px;
+  text-align:center;
+}
+.header h1{
+  color:#00f2ff;
+  font-size:36px;
+  text-shadow:0 0 25px #00f2ff;
+}
+.header p{
+  opacity:.85;
+  font-size:16px;
+}
 
-  .section{
-    padding:50px 20px;
-    background: rgba(0,0,0,0.6);
-    margin:40px auto;
-    border-radius: 20px;
-    max-width: 1200px;
-  }
+/* COMMON BOX STYLE */
+.box{
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#0b1022,#070b18);
+  box-shadow:0 0 35px rgba(0,242,255,.25);
+}
+.box h2{
+  text-align:center;
+  color:#00f2ff;
+  margin-bottom:20px;
+}
 
-  /* Bootable USB Grid */
-  .bootable-grid{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .bootable-column{
-    background: rgba(0,255,255,0.1);
-    padding: 20px;
-    border-radius: 15px;
-    flex:1;
-    min-width: 280px;
-    box-shadow: 0 0 20px rgba(0,255,255,0.3);
-    transition: transform 0.3s;
-  }
-  .bootable-column:hover{
-    transform: translateY(-10px);
-  }
-  .bootable-column h3{
-    color:#00f7ff;
-  }
-  .bootable-column ul li{
-    margin-bottom: 8px;
-    line-height: 1.4;
-  }
-
-  /* Shortcuts Section */
-  .shortcuts-grid{
-    display: flex;
-    gap:20px;
-    flex-wrap: wrap;
-    justify-content:center;
-  }
-  .shortcut-column{
-    background: rgba(255,255,255,0.05);
-    padding:20px;
-    border-radius:15px;
-    flex:1;
-    min-width: 280px;
-    box-shadow:0 0 20px rgba(255,255,255,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .shortcut-column:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 40px #00f7ff;
-  }
-  .shortcut-column h3{
-    color:#00f7ff;
-  }
-  .shortcut-column ul li{
-    margin-bottom:6px;
-    line-height:1.4;
-  }
-
-  /* PS4 Tips */
-  .ps4-tips{
-    padding:20px;
-    background: rgba(255,255,255,0.05);
-    border-radius:15px;
-    box-shadow: 0 0 20px #ff00ff;
-    max-width:800px;
-    margin:auto;
-  }
-
-  /* Animations for scrolling */
-  .fade-in{
-    opacity:0;
-    transform: translateY(20px);
-    transition: all 1s ease-out;
-  }
-  .fade-in.visible{
-    opacity:1;
-    transform: translateY(0);
-  }
-
+/* ITEM STYLE (LIKE YOUR SCREENSHOT) */
+.item{
+  background:#050814;
+  margin:12px 0;
+  padding:16px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:inset 0 0 15px rgba(0,0,0,.7);
+}
 </style>
 </head>
+
 <body>
 
-<h1>?? Ultimate Tech Guide</h1>
-
-<!-- Bootable USB Section -->
-<div class="section fade-in">
-  <h2>?? Bootable USB Guide</h2>
-  <div class="bootable-grid">
-    <div class="bootable-column">
-      <h3>?? Windows OS</h3>
-      <ul>
-        <li>Download ISO from Microsoft.</li>
-        <li>Use Rufus tool to create bootable USB.</li>
-        <li>Select GPT for UEFI.</li>
-        <li>File system: NTFS or FAT32.</li>
-        <li>Click Start ? Wait until Done.</li>
-      </ul>
-    </div>
-    <div class="bootable-column">
-      <h3>?? macOS</h3>
-      <ul>
-        <li>Download macOS DMG.</li>
-        <li>Insert USB (16GB+).</li>
-        <li>Open Terminal ? Use <code>createinstallmedia</code> command.</li>
-        <li>Wait until Terminal shows “Done”.</li>
-        <li>USB ready for macOS install.</li>
-      </ul>
-    </div>
-  </div>
+<div class="header">
+  <h1>?? Ultimate Tech Guide</h1>
+  <p>Shortcuts • Bootable USB • Speed Tips • PS4</p>
 </div>
 
-<!-- Shortcuts Section -->
-<div class="section fade-in">
-  <h2>?? Shortcuts</h2>
-  <div class="shortcuts-grid">
-    <div class="shortcut-column">
-      <h3>Windows Shortcuts</h3>
-      <ul>
-        <li>Win + E ? Open Explorer</li>
-        <li>Alt + Tab ? Switch Window</li>
-        <li>Win + L ? Lock PC</li>
-        <li>Ctrl + C ? Copy</li>
-        <li>Ctrl + V ? Paste</li>
-        <!-- add more -->
-      </ul>
-    </div>
-    <div class="shortcut-column">
-      <h3>macOS Shortcuts</h3>
-      <ul>
-        <li>Cmd + Space ? Spotlight</li>
-        <li>Cmd + Tab ? Switch App</li>
-        <li>Cmd + C ? Copy</li>
-        <li>Cmd + V ? Paste</li>
-        <li>Cmd + Q ? Quit App</li>
-        <!-- add more -->
-      </ul>
-    </div>
-  </div>
+<!-- WINDOWS SHORTCUTS -->
+<div class="box">
+<h2>?? Windows Shortcut Keys</h2>
+<div class="item">Ctrl + C ? Copy</div>
+<div class="item">Ctrl + V ? Paste</div>
+<div class="item">Ctrl + Z ? Undo</div>
+<div class="item">Alt + Tab ? Switch Apps</div>
+<div class="item">Win + E ? File Explorer</div>
+<div class="item">Win + D ? Desktop</div>
+<div class="item">Ctrl + Shift + Esc ? Task Manager</div>
 </div>
 
-<!-- PS4 Tips -->
-<div class="section fade-in">
-  <h2>?? PS4 Tips</h2>
-  <div class="ps4-tips">
-    <ul>
-      <li>Keep your PS4 in a ventilated area to prevent overheating.</li>
-      <li>Rebuild database in safe mode to speed up load times.</li>
-      <li>Keep system updated to latest firmware.</li>
-      <li>Use external HDD for extra storage.</li>
-      <li>Close unused apps to avoid lag.</li>
-    </ul>
-  </div>
+<!-- MAC SHORTCUTS -->
+<div class="box">
+<h2>?? Mac Shortcut Keys</h2>
+<div class="item">Cmd + C ? Copy</div>
+<div class="item">Cmd + V ? Paste</div>
+<div class="item">Cmd + Z ? Undo</div>
+<div class="item">Cmd + Space ? Spotlight</div>
+<div class="item">Cmd + Tab ? Switch Apps</div>
+<div class="item">Cmd + Option + Esc ? Force Quit</div>
 </div>
 
-<script>
-  // Fade-in animation on scroll
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold:0.3 };
-  const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, appearOptions);
+<!-- WINDOWS BOOTABLE -->
+<div class="box">
+<h2>?? Bootable USB – Windows</h2>
+<div class="item">Download Windows ISO (Microsoft)</div>
+<div class="item">Insert 8GB or higher USB</div>
+<div class="item">Open Rufus</div>
+<div class="item">Select GPT (UEFI) or MBR (Legacy)</div>
+<div class="item">Click Start ? Bootable Ready</div>
+</div>
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-</script>
+<!-- MAC BOOTABLE -->
+<div class="box">
+<h2>?? Bootable USB – macOS</h2>
+<div class="item">Download macOS from App Store</div>
+<div class="item">Insert 16GB USB</div>
+<div class="item">Open Terminal</div>
+<div class="item">Use createinstallmedia command</div>
+<div class="item">Restart ? Hold Option ? Install</div>
+</div>
+
+<!-- WINDOWS SPEED -->
+<div class="box">
+<h2>? Make Windows Faster</h2>
+<div class="item">Disable startup apps</div>
+<div class="item">Uninstall unused software</div>
+<div class="item">Use SSD instead of HDD</div>
+<div class="item">Disk Cleanup & Defrag</div>
+<div class="item">Keep Windows updated</div>
+</div>
+
+<!-- MAC SPEED -->
+<div class="box">
+<h2>?? Make Mac Faster</h2>
+<div class="item">Remove login items</div>
+<div class="item">Free storage space</div>
+<div class="item">Close background apps</div>
+<div class="item">Update macOS</div>
+<div class="item">Restart weekly</div>
+</div>
+
+<!-- PS4 -->
+<div class="box">
+<h2>?? Make PS4 Smoother</h2>
+<div class="item">Rebuild Database (Safe Mode)</div>
+<div class="item">Delete unused games</div>
+<div class="item">Clean dust & vents</div>
+<div class="item">Update system software</div>
+<div class="item">Use SSD (PS4 Pro)</div>
+</div>
 
 </body>
 </html>
