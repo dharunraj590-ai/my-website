@@ -2,143 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Ultimate Tech Guide</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <style>
-*{box-sizing:border-box}
-body{
+*{
   margin:0;
-  font-family:Segoe UI, sans-serif;
-  background:#050814;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background:
+    linear-gradient(rgba(5,10,30,.85), rgba(5,10,30,.85)),
+    url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color:#fff;
 }
 
-/* HEADER WITH MACBOOK BACKGROUND */
-.header{
-  background:
-    linear-gradient(rgba(5,8,20,.85),rgba(5,8,20,.85)),
-    url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
-  background-size:cover;
-  background-position:center;
-  padding:60px 20px;
+/* ===== HEADER ===== */
+header{
   text-align:center;
-}
-.header h1{
-  color:#00f2ff;
-  font-size:36px;
-  text-shadow:0 0 25px #00f2ff;
-}
-.header p{
-  opacity:.85;
-  font-size:16px;
+  padding:50px 20px;
 }
 
-/* COMMON BOX STYLE */
-.box{
-  max-width:900px;
+header h1{
+  font-size:2.5rem;
+  color:#00f2ff;
+  text-shadow:0 0 15px #00f2ff;
+  animation: glow 2s infinite alternate;
+}
+
+header p{
+  margin-top:10px;
+  opacity:.9;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 10px #00f2ff; }
+  to{ text-shadow:0 0 25px #00f2ff; }
+}
+
+/* ===== SECTION ===== */
+.section{
   margin:30px auto;
-  padding:25px;
-  border-radius:30px;
-  background:linear-gradient(180deg,#0b1022,#070b18);
-  box-shadow:0 0 35px rgba(0,242,255,.25);
-}
-.box h2{
-  text-align:center;
-  color:#00f2ff;
-  margin-bottom:20px;
+  width:90%;
+  max-width:700px;
+  background:rgba(10,20,40,.85);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 0 30px rgba(0,255,255,.15);
+  animation: fadeUp .8s ease;
 }
 
-/* ITEM STYLE (LIKE YOUR SCREENSHOT) */
-.item{
-  background:#050814;
-  margin:12px 0;
-  padding:16px;
-  border-radius:18px;
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(20px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+.section h2{
   text-align:center;
-  box-shadow:inset 0 0 15px rgba(0,0,0,.7);
+  color:#00f2ff;
+  margin-bottom:15px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:linear-gradient(145deg,#0a1630,#050b1d);
+  margin:10px 0;
+  padding:14px 18px;
+  border-radius:15px;
+  text-align:center;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 15px rgba(0,255,255,.4);
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
+<header>
   <h1>?? Ultimate Tech Guide</h1>
   <p>Shortcuts • Bootable USB • Speed Tips • PS4</p>
-</div>
+</header>
 
 <!-- WINDOWS SHORTCUTS -->
-<div class="box">
-<h2>?? Windows Shortcut Keys</h2>
-<div class="item">Ctrl + C ? Copy</div>
-<div class="item">Ctrl + V ? Paste</div>
-<div class="item">Ctrl + Z ? Undo</div>
-<div class="item">Alt + Tab ? Switch Apps</div>
-<div class="item">Win + E ? File Explorer</div>
-<div class="item">Win + D ? Desktop</div>
-<div class="item">Ctrl + Shift + Esc ? Task Manager</div>
+<div class="section">
+  <h2>?? Windows Shortcut Keys</h2>
+  <div class="card">Ctrl + C ? Copy</div>
+  <div class="card">Ctrl + V ? Paste</div>
+  <div class="card">Ctrl + Z ? Undo</div>
+  <div class="card">Alt + Tab ? Switch Apps</div>
+  <div class="card">Win + E ? File Explorer</div>
+  <div class="card">Win + D ? Show Desktop</div>
+  <div class="card">Ctrl + Shift + Esc ? Task Manager</div>
 </div>
 
 <!-- MAC SHORTCUTS -->
-<div class="box">
-<h2>?? Mac Shortcut Keys</h2>
-<div class="item">Cmd + C ? Copy</div>
-<div class="item">Cmd + V ? Paste</div>
-<div class="item">Cmd + Z ? Undo</div>
-<div class="item">Cmd + Space ? Spotlight</div>
-<div class="item">Cmd + Tab ? Switch Apps</div>
-<div class="item">Cmd + Option + Esc ? Force Quit</div>
+<div class="section">
+  <h2>?? Mac Shortcut Keys</h2>
+  <div class="card">Cmd + C ? Copy</div>
+  <div class="card">Cmd + V ? Paste</div>
+  <div class="card">Cmd + Z ? Undo</div>
+  <div class="card">Cmd + Space ? Spotlight</div>
+  <div class="card">Cmd + Tab ? Switch Apps</div>
+  <div class="card">Cmd + Option + Esc ? Force Quit</div>
 </div>
 
-<!-- WINDOWS BOOTABLE -->
-<div class="box">
-<h2>?? Bootable USB – Windows</h2>
-<div class="item">Download Windows ISO (Microsoft)</div>
-<div class="item">Insert 8GB or higher USB</div>
-<div class="item">Open Rufus</div>
-<div class="item">Select GPT (UEFI) or MBR (Legacy)</div>
-<div class="item">Click Start ? Bootable Ready</div>
+<!-- BOOTABLE USB -->
+<div class="section">
+  <h2>?? Bootable USB (Windows & macOS)</h2>
+  <div class="card">Windows: Download ISO ? Use Rufus ? Select GPT/MBR ? Start</div>
+  <div class="card">macOS: Use Terminal ? createinstallmedia ? Select USB</div>
+  <div class="card">Always backup data before making bootable USB</div>
 </div>
 
-<!-- MAC BOOTABLE -->
-<div class="box">
-<h2>?? Bootable USB – macOS</h2>
-<div class="item">Download macOS from App Store</div>
-<div class="item">Insert 16GB USB</div>
-<div class="item">Open Terminal</div>
-<div class="item">Use createinstallmedia command</div>
-<div class="item">Restart ? Hold Option ? Install</div>
+<!-- WINDOWS FASTER -->
+<div class="section">
+  <h2>? Make Windows Faster</h2>
+  <div class="card">Disable startup apps (Task Manager)</div>
+  <div class="card">Uninstall unused software</div>
+  <div class="card">Delete temp files & recycle bin</div>
+  <div class="card">Turn off visual effects</div>
+  <div class="card">Use SSD for huge speed boost</div>
 </div>
 
-<!-- WINDOWS SPEED -->
-<div class="box">
-<h2>? Make Windows Faster</h2>
-<div class="item">Disable startup apps</div>
-<div class="item">Uninstall unused software</div>
-<div class="item">Use SSD instead of HDD</div>
-<div class="item">Disk Cleanup & Defrag</div>
-<div class="item">Keep Windows updated</div>
-</div>
-
-<!-- MAC SPEED -->
-<div class="box">
-<h2>?? Make Mac Faster</h2>
-<div class="item">Remove login items</div>
-<div class="item">Free storage space</div>
-<div class="item">Close background apps</div>
-<div class="item">Update macOS</div>
-<div class="item">Restart weekly</div>
+<!-- MAC FASTER -->
+<div class="section">
+  <h2>?? Make Mac Faster</h2>
+  <div class="card">Disable login items</div>
+  <div class="card">Free storage space</div>
+  <div class="card">Reduce motion & transparency</div>
+  <div class="card">Close heavy background apps</div>
+  <div class="card">Restart Mac weekly</div>
 </div>
 
 <!-- PS4 -->
-<div class="box">
-<h2>?? Make PS4 Smoother</h2>
-<div class="item">Rebuild Database (Safe Mode)</div>
-<div class="item">Delete unused games</div>
-<div class="item">Clean dust & vents</div>
-<div class="item">Update system software</div>
-<div class="item">Use SSD (PS4 Pro)</div>
+<div class="section">
+  <h2>?? Make PS4 Smoother</h2>
+  <div class="card">Rebuild database (Safe Mode)</div>
+  <div class="card">Free storage space</div>
+  <div class="card">Close background apps</div>
+  <div class="card">Keep system software updated</div>
+  <div class="card">Use internal SSD for faster loading</div>
 </div>
 
 </body>
