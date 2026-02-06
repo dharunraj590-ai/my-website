@@ -1,348 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Laptop &amp; bootable &amp; ps4 usb guide</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-
-<html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <title>Ultimate Tech Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <style>
-
-/* ===== Base ===== */
-
 *{box-sizing:border-box}
-
 body{
-
   margin:0;
-
-  font-family: Arial, Helvetica, sans-serif;
-
+  font-family:Segoe UI, sans-serif;
+  background:#050814;
   color:#fff;
+}
 
+/* HEADER WITH MACBOOK BACKGROUND */
+.header{
   background:
-
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
-
-    url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8")
-
-    no-repeat center/cover fixed;
-
-}
-
-/* ===== Animations ===== */
-
-@keyframes slideUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
-
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-@keyframes glow{from{text-shadow:0 0 6px #00eaff}to{text-shadow:0 0 28px #00eaff}}
-
-@keyframes pop{0%{transform:scale(.9)}100%{transform:scale(1)}}
-
-@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
-
-/* ===== Layout ===== */
-
-.section{
-
-  margin:28px auto;
-
-  max-width:1000px;
-
-  padding:26px;
-
-  border-radius:20px;
-
-  background:rgba(0,0,0,.82);
-
-  animation: slideUp 1.1s ease both;
-
-}
-
-h1,h2{
-
+    linear-gradient(rgba(5,8,20,.85),rgba(5,8,20,.85)),
+    url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+  background-size:cover;
+  background-position:center;
+  padding:60px 20px;
   text-align:center;
-
-  color:#00eaff;
-
-  animation: glow 2.2s infinite alternate;
-
+}
+.header h1{
+  color:#00f2ff;
+  font-size:36px;
+  text-shadow:0 0 25px #00f2ff;
+}
+.header p{
+  opacity:.85;
+  font-size:16px;
 }
 
-/* ===== Hero ===== */
-
-.hero{
-
-  width:100%;
-
-  border-radius:20px;
-
-  margin-top:14px;
-
-  box-shadow:0 0 35px rgba(0,234,255,.6);
-
-  animation: pop 1.2s ease, float 4s ease-in-out infinite;
-
+/* COMMON BOX STYLE */
+.box{
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:30px;
+  background:linear-gradient(180deg,#0b1022,#070b18);
+  box-shadow:0 0 35px rgba(0,242,255,.25);
+}
+.box h2{
+  text-align:center;
+  color:#00f2ff;
+  margin-bottom:20px;
 }
 
-/* ===== Cards ===== */
-
-.grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-  gap:14px;
-
+/* ITEM STYLE (LIKE YOUR SCREENSHOT) */
+.item{
+  background:#050814;
+  margin:12px 0;
+  padding:16px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:inset 0 0 15px rgba(0,0,0,.7);
 }
-
-.card{
-
-  background:rgba(255,255,255,.12);
-
-  padding:14px;
-
-  border-radius:14px;
-
-  transition:.35s;
-
-  animation: fadeIn .9s ease both;
-
-}
-
-.card:hover{
-
-  transform:scale(1.06);
-
-  box-shadow:0 0 22px #00eaff;
-
-}
-
-/* ===== Divider ===== */
-
-.divider{
-
-  height:1px;
-
-  background:linear-gradient(90deg,transparent,#00eaff,transparent);
-
-  margin:22px 0;
-
-}
-
-/* ===== Footer ===== */
-
-footer{opacity:.85;text-align:center;padding:16px}
-
-.small{opacity:.85}
-
-/* ===== Scroll reveal (simple CSS trick) ===== */
-
-.reveal{opacity:0; transform:translateY(40px)}
-
-.reveal.show{opacity:1; transform:none; transition:1s}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- HOME -->
-
-<div class="section">
-
-  <h1>💻 Ultimate Tech Guide</h1>
-
-  <p class="small" style="text-align:center">Shortcuts • Bootable USB • PS4 Tips</p>
-
-  <img class="hero" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="MacBook Pro">
-
+<div class="header">
+  <h1>?? Ultimate Tech Guide</h1>
+  <p>Shortcuts � Bootable USB � Speed Tips � PS4</p>
 </div>
 
 <!-- WINDOWS SHORTCUTS -->
-
-<div class="section reveal">
-
-<h2>🪟 Windows Shortcuts</h2>
-
-<div class="grid">
-
-  <div class="card">Ctrl + C → Copy</div>
-
-  <div class="card">Ctrl + V → Paste</div>
-
-  <div class="card">Ctrl + X → Cut</div>
-
-  <div class="card">Ctrl + Z → Undo</div>
-
-  <div class="card">Ctrl + A → Select All</div>
-
-  <div class="card">Alt + Tab → Switch Apps</div>
-
-  <div class="card">Win + D → Desktop</div>
-
-  <div class="card">Win + E → File Explorer</div>
-
-  <div class="card">Win + L → Lock PC</div>
-
-  <div class="card">Ctrl + Shift + Esc → Task Manager</div>
-
-</div>
-
+<div class="box">
+<h2>?? Windows Shortcut Keys</h2>
+<div class="item">Ctrl + C ? Copy</div>
+<div class="item">Ctrl + V ? Paste</div>
+<div class="item">Ctrl + Z ? Undo</div>
+<div class="item">Alt + Tab ? Switch Apps</div>
+<div class="item">Win + E ? File Explorer</div>
+<div class="item">Win + D ? Desktop</div>
+<div class="item">Ctrl + Shift + Esc ? Task Manager</div>
 </div>
 
 <!-- MAC SHORTCUTS -->
-
-<div class="section reveal">
-
-<h2>🍎 macOS Shortcuts</h2>
-
-<div class="grid">
-
-  <div class="card">⌘ + C → Copy</div>
-
-  <div class="card">⌘ + V → Paste</div>
-
-  <div class="card">⌘ + X → Cut</div>
-
-  <div class="card">⌘ + Z → Undo</div>
-
-  <div class="card">⌘ + A → Select All</div>
-
-  <div class="card">⌘ + Space → Spotlight</div>
-
-  <div class="card">⌘ + Tab → Switch Apps</div>
-
-  <div class="card">⌘ + Shift + 3 → Screenshot</div>
-
-  <div class="card">⌘ + ⌥ + Esc → Force Quit</div>
-
+<div class="box">
+<h2>?? Mac Shortcut Keys</h2>
+<div class="item">Cmd + C ? Copy</div>
+<div class="item">Cmd + V ? Paste</div>
+<div class="item">Cmd + Z ? Undo</div>
+<div class="item">Cmd + Space ? Spotlight</div>
+<div class="item">Cmd + Tab ? Switch Apps</div>
+<div class="item">Cmd + Option + Esc ? Force Quit</div>
 </div>
 
+<!-- WINDOWS BOOTABLE -->
+<div class="box">
+<h2>?? Bootable USB � Windows</h2>
+<div class="item">Download Windows ISO (Microsoft)</div>
+<div class="item">Insert 8GB or higher USB</div>
+<div class="item">Open Rufus</div>
+<div class="item">Select GPT (UEFI) or MBR (Legacy)</div>
+<div class="item">Click Start ? Bootable Ready</div>
 </div>
 
-<!-- WINDOWS USB -->
-
-<div class="section reveal">
-
-<h2>🪟 Windows Bootable USB (FULL)</h2>
-
-<div class="card">
-
-1) USB (8GB+) & backup data<br>
-
-2) Download Windows ISO (Microsoft)<br>
-
-3) Download Rufus<br>
-
-4) Insert USB → Open Rufus<br>
-
-5) Select USB & ISO<br>
-
-6) Partition: GPT (UEFI) / MBR (Legacy)<br>
-
-7) Click START → wait<br>
-
-8) Bootable Windows USB ready
-
+<!-- MAC BOOTABLE -->
+<div class="box">
+<h2>?? Bootable USB � macOS</h2>
+<div class="item">Download macOS from App Store</div>
+<div class="item">Insert 16GB USB</div>
+<div class="item">Open Terminal</div>
+<div class="item">Use createinstallmedia command</div>
+<div class="item">Restart ? Hold Option ? Install</div>
 </div>
 
+<!-- WINDOWS SPEED -->
+<div class="box">
+<h2>? Make Windows Faster</h2>
+<div class="item">Disable startup apps</div>
+<div class="item">Uninstall unused software</div>
+<div class="item">Use SSD instead of HDD</div>
+<div class="item">Disk Cleanup & Defrag</div>
+<div class="item">Keep Windows updated</div>
 </div>
 
-<!-- MAC USB -->
-
-<div class="section reveal">
-
-<h2>🍎 macOS Bootable USB (FULL)</h2>
-
-<div class="card">
-
-1) USB (16GB+)<br>
-
-2) Download macOS (App Store)<br>
-
-3) Disk Utility → Erase USB<br>
-
-4) Format: Mac OS Extended (Journaled)<br>
-
-5) Name: MyUSB<br>
-
-6) Terminal → createinstallmedia<br>
-
-7) Enter password & wait<br>
-
-8) macOS installer ready
-
-</div>
-
+<!-- MAC SPEED -->
+<div class="box">
+<h2>?? Make Mac Faster</h2>
+<div class="item">Remove login items</div>
+<div class="item">Free storage space</div>
+<div class="item">Close background apps</div>
+<div class="item">Update macOS</div>
+<div class="item">Restart weekly</div>
 </div>
 
 <!-- PS4 -->
-
-<div class="section reveal">
-
-<h2>🎮 Make PS4 Smoother</h2>
-
-<div class="grid">
-
-  <div class="card">Delete unused games</div>
-
-  <div class="card">Keep 100GB+ free space</div>
-
-  <div class="card">Rebuild Database (Safe Mode)</div>
-
-  <div class="card">Update system software</div>
-
-  <div class="card">Disable extra notifications</div>
-
-  <div class="card">Clean vents (dust)</div>
-
-  <div class="card">Use internal storage</div>
-
+<div class="box">
+<h2>?? Make PS4 Smoother</h2>
+<div class="item">Rebuild Database (Safe Mode)</div>
+<div class="item">Delete unused games</div>
+<div class="item">Clean dust & vents</div>
+<div class="item">Update system software</div>
+<div class="item">Use SSD (PS4 Pro)</div>
 </div>
-
-</div>
-
-<footer>Made by Bro 😎🔥</footer>
-
-<script>
-
-/* Simple scroll reveal */
-
-const items=document.querySelectorAll('.reveal');
-
-const onScroll=()=>items.forEach(i=>{
-
-  const r=i.getBoundingClientRect();
-
-  if(r.top<window.innerHeight-80) i.classList.add('show');
-
-});
-
-window.addEventListener('scroll',onScroll); onScroll();
-
-</script>
 
 </body>
-
-</html>
-    
-  </body>
-  
 </html>
